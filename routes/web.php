@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('frontend.home');
 });
 
+Route::get('/school-competition', function () {
+    return view('frontend.schoolcompetition');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

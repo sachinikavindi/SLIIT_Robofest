@@ -25,18 +25,12 @@
         @include('frontend.layouts.navbar')
         <!-- /.header -->
 
-        <!-- Page-title -->
-
-
-        @include('frontend.layouts.pagetitle')
-
-        <!-- /.page-title -->
-
+       
        <div> 
         @yield('content')
        </div>
 
-        @include('frontend.layouts.newsblog')
+       
 
        @include('frontend.layouts.sitefooter')
 

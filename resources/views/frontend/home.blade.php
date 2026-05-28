@@ -72,7 +72,7 @@
                         <div class="right">
                             <div class="heading-section mb-60">
                                 <div class="sub-title body-2 fw-7 mb-17 title-animation">
-                                    Explore Our Achievement
+                                    Explore Our Achievements
                                 </div>
                                 <h2 class="title fw-6 title-animation">
                                     Premier Tech Innovations
@@ -165,7 +165,7 @@
                                                 Empowering school students to explore the fundamentals of robotics, electronics, and coding through creative, hands-on challenges.
                                             </div>
                                             <a href="services-details.html" class="image">
-                                                <img src="{{ asset('frontend/image/services-item/services-1.jpg') }}" data-src="{{ asset('frontend/image/services-item/services-1.jpg') }}" alt="" class="lazyload">
+                                                <img src="{{ asset('frontend/image/services-item/school_competition.jpg') }}" data-src="{{ asset('frontend/image/services-item/school_competition.jpg') }}" alt="" class="lazyload">
                                             </a>
                                             <div class="bottom-item">
                                                 <a href="services-details.html" class="tf-btn-readmore">
@@ -193,7 +193,7 @@
                                                 Challenging university minds to design and build advanced autonomous systems, pushing the boundaries of engineering innovation.
                                             </div>
                                             <a href="services-details.html" class="image">
-                                                <img src="{{ asset('frontend/image/services-item/services-2.jpg') }}" data-src="{{ asset('frontend/image/services-item/services-2.jpg') }}" alt="" class="lazyload">
+                                                <img src="{{ asset('frontend/image/services-item/university_competition.jpg') }}" data-src="{{ asset('frontend/image/services-item/university_competition.jpg') }}" alt="" class="lazyload">
                                             </a>
                                             <div class="bottom-item">
                                                 <a href="services-details.html" class="tf-btn-readmore">
@@ -222,7 +222,7 @@
                                                 Featuring two main tracks: the high-speed <strong>Drone Competition</strong> and the tactical planetary explorer <strong>Rover Competition</strong> open for all.
                                             </div>
                                             <a href="services-details.html" class="image">
-                                                <img src="{{ asset('frontend/image/services-item/services-3.jpg') }}" data-src="{{ asset('frontend/image/services-item/services-3.jpg') }}" alt="" class="lazyload">
+                                                <img src="{{ asset('frontend/image/services-item/SLIIT-robofest-drone.jpg') }}" data-src="{{ asset('frontend/image/services-item/SLIIT-robofest-drone.jpg') }}" alt="" class="lazyload">
                                             </a>
                                             <div class="bottom-item flex g-15 align-items-center">
                                                 <a href="/drone-competition" class="tf-btn-readmore style-drone-rover">
@@ -310,7 +310,7 @@
                                     </div>
                                 </div>
                                 <a href="porfolio-details.html" class="image">
-                                    <img src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" data-src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" alt="" class="lazyload">
+                                    <img src="{{ asset('frontend/image/project-item/champion-school.jpg') }}" data-src="{{ asset('frontend/image/project-item/champion-school.jpg') }}" alt="" class="lazyload">
                                 </a>
                             </div>
                         </div>
@@ -336,7 +336,7 @@
                                     </div>
                                 </div>
                                 <a href="porfolio-details.html" class="image">
-                                    <img src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" data-src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" alt="" class="lazyload">
+                                    <img src="{{ asset('frontend/image/project-item/Champion-UNI.jpg') }}" data-src="{{ asset('frontend/image/project-item/Champion-UNI.jpg') }}" alt="" class="lazyload">
                                 </a>
                             </div>
                         </div>
@@ -362,7 +362,7 @@
                                     </div>
                                 </div>
                                 <a href="porfolio-details.html" class="image">
-                                    <img src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" data-src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" alt="" class="lazyload">
+                                    <img src="{{ asset('frontend/image/project-item/champion-school.jpg') }}" data-src="{{ asset('frontend/image/project-item/champion-school.jpg') }}" alt="" class="lazyload">
                                 </a>
                             </div>
                         </div>
@@ -388,7 +388,7 @@
                                     </div>
                                 </div>
                                 <a href="porfolio-details.html" class="image">
-                                    <img src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" data-src="{{ asset('frontend/image/project-item/project-item-1.jpg') }}" alt="" class="lazyload">
+                                    <img src="{{ asset('frontend/image/project-item/Champion-UNI.jpg') }}" data-src="{{ asset('frontend/image/project-item/Champion-UNI.jpg') }}" alt="" class="lazyload">
                                 </a>
                             </div>
                         </div>
@@ -494,13 +494,13 @@
                         <div class="col-lg-4">
                             <div class="list-image">
                                 <div class="img-section img-1 img-elip tf-animate-1">
-                                    <img src="{{ asset('frontend/image/section/section-testimonial-1.jpg') }}" data-src="{{ asset('frontend/image/section/section-testimonial-1.jpg') }}" alt="" class="lazyload">
+                                    <img src="{{ asset('frontend/image/section/section-testimonial-1.png') }}" data-src="{{ asset('frontend/image/section/section-testimonial-1.png') }}" alt="" class="lazyload">
                                 </div>
                                 <div class="img-section img-2 tf-animate-2">
-                                    <img src="{{ asset('frontend/image/section/section-testimonial-2.jpg') }}" data-src="{{ asset('frontend/image/section/section-testimonial-2.jpg') }}" alt="" class="lazyload">
+                                    <img src="{{ asset('frontend/image/section/section-testimonial-2.png') }}" data-src="{{ asset('frontend/image/section/section-testimonial-2.png') }}" alt="" class="lazyload">
                                 </div>
                                 <div class="img-section img-3 tf-animate-3">
-                                    <img src="{{ asset('frontend/image/section/section-testimonial-3.jpg') }}" data-src="{{ asset('frontend/image/section/section-testimonial-3.jpg') }}" alt="" class="lazyload">
+                                    <img src="{{ asset('frontend/image/section/section-testimonial-3.png') }}" data-src="{{ asset('frontend/image/section/section-testimonial-3.jpg') }}" alt="" class="lazyload">
                                 </div>
                                 <div class="img-section img-4 img-elip tf-animate-4">
                                     <img src="{{ asset('frontend/image/section/section-testimonial-4.jpg') }}" data-src="{{ asset('frontend/image/section/section-testimonial-4.jpg') }}" alt="" class="lazyload">

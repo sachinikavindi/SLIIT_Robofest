@@ -16,24 +16,25 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="menu-item">
+                            
+                            <li class="menu-item menu-item-has-children position-relative">
                                 <a href="" class="item-link body-2">
                                     <span>
                                         Competitions
                                     </span>
                                 </a>
+                                <ul class="sub-menu">
+                                    <li class="sub-menu-item"><a href="" class="item-link-2 body-2">School Competition</a></li>
+                                    <li class="sub-menu-item"><a href="" class="item-link-2 body-2">University Competition</a></li>
+                                    <li class="sub-menu-item"><a href="" class="item-link-2 body-2">Open Competition</a></li>
+                                </ul>
                             </li>
-                            <li class="menu-item menu-item-has-children position-relative">
+                            <li class="menu-item">
                                 <a href="" class="item-link body-2">
                                     <span>
                                         School Outreach
                                     </span>
                                 </a>
-                                <ul class="sub-menu">
-                                    <li class="sub-menu-item"><a href="" class="item-link-2 body-2">Porfolio Grid</a></li>
-                                    <li class="sub-menu-item"><a href="" class="item-link-2 body-2">Porfolio List</a></li>
-                                    <li class="sub-menu-item"><a href="" class="item-link-2 body-2">Porfolio Details</a></li>
-                                </ul>
                             </li>
                             <li class="menu-item menu-item-has-children position-relative">
                                 <a href="" class="item-link body-2">
@@ -72,8 +73,8 @@
                 </div>
                 <div class="header-right">
                     <div class="nav-btn">
-                        <a href="pricing.html" class="tf-btn">
-                            <span>Get A Quote</span>
+                        <a href="/register" class="tf-btn">
+                            <span>Register Now</span>
                             <i class="icon-arrow-right"></i>
                         </a>
                     </div>

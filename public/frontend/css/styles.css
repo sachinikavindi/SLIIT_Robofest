@@ -1659,21 +1659,39 @@ a:focus {
 }
 
 /*------------ footer ---------------- */
-.footer {
+.footer,
+#footer {
   overflow: hidden;
-  background-color: var(--dark-2);
+  background-color: #000000 !important;
+  background: #000000 !important;
   position: relative;
 }
 
-.footer .footer-top {
-  padding-top: 90px;
-  padding-bottom: 91px;
+/* Animated glowing top accent bar for Footer */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(37, 176, 35, 0.6) 30%,
+    #25b023 50%,
+    rgba(67, 186, 255, 0.5) 70%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: about-shimmer 4s ease-in-out infinite;
+  z-index: 2;
 }
 
 .footer .line {
   width: 100%;
   height: 1px;
-  background-color: var(--stroke-2);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .footer .footer-go-top {
@@ -1682,8 +1700,35 @@ a:focus {
 }
 
 .footer .footer-middle {
-  margin-bottom: 103px;
+  margin-bottom: 60px;
   gap: 50px 30px;
+}
+
+/* Custom premium hover effects for Footer */
+.footer .social-icon {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.footer .social-icon:hover {
+  background: #6BC044 !important;
+  color: #000000 !important;
+  border-color: #6BC044 !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(107, 192, 68, 0.4);
+}
+
+.footer-col-block ul li {
+  overflow: hidden;
+}
+
+.footer-col-block ul li a {
+  display: inline-block;
+  transition: all 0.3s ease !important;
+}
+
+.footer-col-block ul li a:hover {
+  color: #6BC044 !important;
+  transform: translateX(6px);
 }
 
 .footer .mask {
@@ -3367,67 +3412,71 @@ fieldset {
 }
 
 .tf-post-list.style-2 {
-  border: 1px solid var(--stroke-2);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
   justify-content: space-between;
   gap: 0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .tf-post-list.style-2 .image {
-  border-radius: 0;
+  border-radius: 14px;
   overflow: hidden;
-  margin: 10px 10px 7px;
-  max-width: 100%;
+  margin: 15px;
+  max-width: 45%;
+  flex: 0 0 45%;
 }
 
 .tf-post-list.style-2 .image img {
   display: block;
-  height: auto;
-  transform: translateY(0);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .tf-post-list.style-2 .post-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  padding: 30px 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  flex: 1;
+  gap: 20px;
 }
 
 .tf-post-list.style-2 .post-meta {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-bottom: 15px;
+  gap: 15px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .tf-post-list.style-2 .post-meta .line {
   display: block;
   height: 1px;
-  width: 20px;
-  background-color: var(--white);
+  width: 15px;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .tf-post-list.style-2 .post-meta a {
   white-space: nowrap;
+  color: #6BC044;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.tf-post-list.style-2 .post-meta a:hover {
+  color: var(--white);
 }
 
 .tf-post-list.style-2 .title {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   color: var(--white);
   cursor: pointer;
@@ -3435,22 +3484,54 @@ fieldset {
 
 .tf-post-list.style-2 .title a {
   font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
   letter-spacing: -0.3px;
-  text-decoration-line: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 1px;
-}
-
-.tf-post-list.style-2 .title a:hover {
-  text-decoration-color: var(--primary) !important;
+  text-decoration: none;
+  background: linear-gradient(to right, #6BC044, #6BC044) no-repeat;
+  background-size: 0 2px;
+  background-position: 0 100%;
+  transition: background-size 0.3s, color 0.3s;
 }
 
 .tf-post-list.style-2 .desc {
-  margin-bottom: 21px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.tf-post-list.style-2 .tf-btn-readmore.style-open {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.tf-post-list.style-2 .tf-btn-readmore.style-open:hover {
+  background-color: #6BC044;
+  border-color: #6BC044;
+}
+
+.tf-post-list.style-2 .tf-btn-readmore.style-open:hover .plus,
+.tf-post-list.style-2 .tf-btn-readmore.style-open:hover .text {
+  color: #142125 !important;
+}
+
+/* Hover effects */
+.tf-post-list.style-2:hover {
+  transform: translateY(-8px);
+  border-color: rgba(107, 192, 68, 0.4);
+  background: linear-gradient(145deg, rgba(107, 192, 68, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 35px rgba(107, 192, 68, 0.12);
+}
+
+.tf-post-list.style-2:hover .image img {
+  transform: scale(1.08);
 }
 
 .tf-post-list.style-2:hover .title a {
-  text-decoration-color: var(--white);
+  color: #6BC044;
+  background-size: 100% 2px;
 }
 
 .tabs-list {
@@ -7953,7 +8034,8 @@ a.mapboxgl-ctrl-logo {
 
 .section-about,
 .section-project,
-.section-testimonial {
+.section-testimonial,
+.section-blog {
   position: relative;
   overflow: hidden;
   background: #142125;
@@ -7971,13 +8053,21 @@ a.mapboxgl-ctrl-logo {
   padding-top: 130px;
 }
 
+.section-blog {
+  margin-top: -120px;
+  padding-top: 130px;
+  margin-bottom: 0 !important;
+  padding-bottom: 120px !important;
+}
+
 .section-project .project-item .item-content .title-project a::before {
   background-color: #25b023 !important;
 }
 
 /* Animated glowing top accent bar */
 .section-about::before,
-.section-testimonial::before {
+.section-testimonial::before,
+.section-blog::before {
   content: '';
   position: absolute;
   top: 0;
@@ -8005,7 +8095,8 @@ a.mapboxgl-ctrl-logo {
 /* Subtle dot-grid background pattern */
 .section-about::after,
 .section-project::after,
-.section-testimonial::after {
+.section-testimonial::after,
+.section-blog::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -8018,13 +8109,15 @@ a.mapboxgl-ctrl-logo {
 /* Radial green glow – top-left */
 .section-about .tf-container,
 .section-project .tf-container,
-.section-testimonial .tf-container {
+.section-testimonial .tf-container,
+.section-blog .tf-container {
   position: relative;
   z-index: 1;
 }
 .section-about .tf-container::before,
 .section-project .tf-container::before,
-.section-testimonial .tf-container::before {
+.section-testimonial .tf-container::before,
+.section-blog .tf-container::before {
   content: '';
   position: absolute;
   top: -80px;
@@ -8038,7 +8131,8 @@ a.mapboxgl-ctrl-logo {
 /* Radial blue glow – bottom-right */
 .section-about .tf-container::after,
 .section-project .tf-container::after,
-.section-testimonial .tf-container::after {
+.section-testimonial .tf-container::after,
+.section-blog .tf-container::after {
   content: '';
   position: absolute;
   bottom: -100px;
@@ -8053,7 +8147,8 @@ a.mapboxgl-ctrl-logo {
 /* ── Subtitle pill ── */
 .section-about .heading-section .sub-title,
 .section-services .heading-section .sub-title,
-.section-testimonial .heading-section .sub-title {
+.section-testimonial .heading-section .sub-title,
+.section-blog .heading-section .sub-title {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -8074,7 +8169,8 @@ a.mapboxgl-ctrl-logo {
 /* ── Main heading ── */
 .section-about .heading-section .title,
 .section-services .heading-section .title,
-.section-testimonial .heading-section .title {
+.section-testimonial .heading-section .title,
+.section-blog .heading-section .title {
   font-size: 52px;
   line-height: 1.12;
   letter-spacing: -1px;
@@ -8192,6 +8288,46 @@ a.mapboxgl-ctrl-logo {
 .section-project .project-item:hover .tf-btn-readmore .plus,
 .section-project .project-item:hover .tf-btn-readmore .text {
   color: #142125 !important;
+}
+
+/* ================================================
+   Navbar — Premium Register Now Button
+   ================================================ */
+.header .nav-btn .tf-btn {
+  background: linear-gradient(135deg, #25b023 0%, #6BC044 100%) !important;
+  color: #142125 !important;
+  border: none !important;
+  border-radius: 30px !important; /* Elegant pill shape */
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  padding: 12px 28px !important;
+  box-shadow: 0 4px 15px rgba(107, 192, 68, 0.3) !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.header .nav-btn .tf-btn span,
+.header .nav-btn .tf-btn i {
+  color: #142125 !important;
+  font-weight: 700 !important;
+  transition: transform 0.3s ease !important;
+}
+
+.header .nav-btn .tf-btn:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 8px 25px rgba(107, 192, 68, 0.5) !important;
+  background: linear-gradient(135deg, #6BC044 0%, #25b023 100%) !important;
+}
+
+.header .nav-btn .tf-btn:hover i {
+  transform: translateX(4px) !important;
+}
+
+/* ================================================
+   Project & Testimonial Sections — Pagination Fix (Overlay Prevention)
+   ================================================ */
+.section-project .sw-pagination-project,
+.section-testimonial .sw-pagination-testimonial {
+  padding-bottom: 45px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

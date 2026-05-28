@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <a href="blog-details.html" class="image">
-                        <img src="{{ asset('frontend/image/blog/post-list-4.jpg') }}" data-src="{{ asset('frontend/image/blog/post-list-4.jpg') }}" alt="" class="lazyload">
+                        <img src="{{ asset('frontend/image/blog/post-list-5.jpg') }}" data-src="{{ asset('frontend/image/blog/post-list-5.jpg') }}" alt="" class="lazyload">
                     </a>
                 </div>
             </div>
